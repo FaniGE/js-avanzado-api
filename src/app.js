@@ -6,7 +6,7 @@ import bookRoutes from './routes/book.routes';
 const app=express();
 
 //Setttings
-app.set('port', 4000);
+app.set('port', 1200);
 
 //middlewares
 app.use(morgan('dev')); //para ver el tipo de petición que se realiza
