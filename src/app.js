@@ -1,8 +1,8 @@
 import express from 'express';
 import morgan from 'morgan';
 //para las rutas
-import videoRoutes from './routes/video.routes';
-import bookRoutes from './routes/book.routes';
+import videoRoutes from './routes/video.routes.js';
+import bookRoutes from './routes/book.routes.js';
 const app=express();
 const port = process.env.PORT ||4000;
 
