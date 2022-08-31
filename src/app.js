@@ -4,9 +4,10 @@ import morgan from 'morgan';
 import videoRoutes from './routes/video.routes';
 import bookRoutes from './routes/book.routes';
 const app=express();
+const port = process.env.PORT ||4000;
 
 //Setttings
-app.set('port', 4000);
+app.set('port', port);
 
 //middlewares
 app.use(morgan('dev')); //para ver el tipo de petición que se realiza
