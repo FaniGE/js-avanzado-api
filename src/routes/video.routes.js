@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { methods as videoController } from "./../controllers/video.controller";
+import { methods as videoController } from "./../controllers/video.controller.js";
 
 const router = Router();
 
