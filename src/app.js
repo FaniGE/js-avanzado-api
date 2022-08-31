@@ -3,8 +3,9 @@ import express from 'express';
 //para las rutas
 import videoRoutes from './routes/video.routes.js';
 import bookRoutes from './routes/book.routes.js';
+import config from "./config.js"
 const app=express();
-const port = process.env.PORT ||4000;
+const port = config.port ||4000;
 
 //Setttings
 app.set('port', port);
