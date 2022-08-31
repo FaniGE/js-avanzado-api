@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "babel-node": "babel-node --presets=@babel/preset-env",
-    "start": "nodemon --exec npm run babel-node src/index.js",
+    "start": "nodemon --exec src/index.js",
     "dev": "nodemon --exec npm run babel-node src/index.js"
   },
   "keywords": [],
@@ -23,5 +24,8 @@
     "@babel/preset-env": "^7.18.10",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.19"
+  },
+  "engines":{
+    "node":"16.x"
   }
 }
