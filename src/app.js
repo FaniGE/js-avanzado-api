@@ -1,5 +1,5 @@
 import express from 'express';
-import morgan from 'morgan';
+//import morgan from 'morgan';
 //para las rutas
 import videoRoutes from './routes/video.routes.js';
 import bookRoutes from './routes/book.routes.js';
@@ -10,7 +10,7 @@ const port = process.env.PORT ||4000;
 app.set('port', port);
 
 //middlewares
-app.use(morgan('dev')); //para ver el tipo de petición que se realiza
+//app.use(morgan('dev')); //para ver el tipo de petición que se realiza
 app.use(express.json());
 
 // Routes
