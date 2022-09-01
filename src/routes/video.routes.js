@@ -9,4 +9,5 @@ router.post("/", videoController.addVideo);
 router.put("/:id", videoController.updateVideo);
 router.delete("/:id", videoController.deleteVideo);
 
+router.get("/search/:name", videoController.getVideoByName); 
 export default router;

@@ -71,11 +71,27 @@ const deleteVideo = async (req, res) => {
         res.send(error.message);
     }
 };
+//adicionales
+const getVideoByName = async (req, res) => {
+    try {
+        const {name} = req.params;
+        const connection = await getConnection();
+        const result = await connection.query("SELECT * FROM videos WHERE video_name LIKE ?;", ['%' + name + '%']);
+        res.json(result);
+    } catch (error) {
+        res.status(500);
+        res.send(error.message);
+    }
+};
+
+
 
 export const methods = {
     getVideos,
     getVideo,
     addVideo,
     updateVideo,
-    deleteVideo
+    deleteVideo,
+    getVideoByName,
+  
 };
