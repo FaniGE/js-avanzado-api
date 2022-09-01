@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "31da360e-eb59-4326-93d4-4f5cf1f098ce",
+		"name": "API Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23002423"
+	},
+	"item": [
+		{
+			"name": "GetAllBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apiexpress22.herokuapp.com/api/books",
+					"protocol": "https",
+					"host": [
+						"apiexpress22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBookById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apiexpress22.herokuapp.com/api/books/1",
+					"protocol": "https",
+					"host": [
+						"apiexpress22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"ejemplo libro 5\",\r\n        \"total_pages\": 10000,\r\n        \"author\": \"ejemplo autor 5\",\r\n        \"nationality\": \"mexicana\",\r\n        \"language\": \"español\",\r\n        \"cover_url\": \"www.libro5.com.mx/book.pdf\",\r\n        \"editorial\": \"ejemplo editorial5\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apiexpress22.herokuapp.com/api/books",
+					"protocol": "https",
+					"host": [
+						"apiexpress22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"ejemplo libro 3\",\r\n        \"total_pages\": 7000,\r\n        \"author\": \"ejemplo autor 3\",\r\n        \"nationality\": \"mexicana\",\r\n        \"language\": \"español\",\r\n        \"cover_url\": \"www.libro3.com.mx/book.pdf\",\r\n        \"editorial\": \"ejemplo editorial3\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apiexpress22.herokuapp.com/api/books/4",
+					"protocol": "https",
+					"host": [
+						"apiexpress22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"books",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/books/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"books",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSearchBookByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apiexpress22.herokuapp.com/api/books/search/ejemplo",
+					"protocol": "https",
+					"host": [
+						"apiexpress22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"books",
+						"search",
+						"ejemplo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTotalBooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/books/total/books/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"books",
+						"total",
+						"books",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllVideos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/videos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVideosById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/videos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"videos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateVideos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"video_name\": \"sample3\",\r\n        \"url\": \"sample url3\",\r\n        \"duration\": \"15:30\",\r\n        \"views_number\": 15,\r\n        \"video_type\": \"mp4\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/videos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateVideos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"video_name\": \"sample3\",\r\n        \"url\": \"sample url3\",\r\n        \"duration\": \"20:15\",\r\n        \"views_number\": 45,\r\n        \"video_type\": \"mp4\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/videos/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"videos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteVideos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/videos/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"videos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSearchVideoByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/videos/search/sample2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"videos",
+						"search",
+						"sample2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTotalVideos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apiexpress22.herokuapp.com/api/videos/total/videos/",
+					"protocol": "https",
+					"host": [
+						"apiexpress22",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"videos",
+						"total",
+						"videos",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
