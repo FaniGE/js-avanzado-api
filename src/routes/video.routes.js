@@ -10,4 +10,5 @@ router.put("/:id", videoController.updateVideo);
 router.delete("/:id", videoController.deleteVideo);
 
 router.get("/search/:name", videoController.getVideoByName); 
+router.get("/total/videos/", videoController.getCountTotalVideos);
 export default router;

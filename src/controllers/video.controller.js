@@ -84,6 +84,16 @@ const getVideoByName = async (req, res) => {
     }
 };
 
+const getCountTotalVideos = async (req, res) => {
+    try {
+        const connection = await getConnection();
+        const result = await connection.query("SELECT count(*) as total_videos  FROM videos;");
+        res.json({"Total de videos": result[0].total_videos});
+    } catch (error) {
+        res.status(500);
+        res.send(error.message);
+    }
+};
 
 
 export const methods = {
@@ -93,5 +103,5 @@ export const methods = {
     updateVideo,
     deleteVideo,
     getVideoByName,
-  
+    getCountTotalVideos
 };
