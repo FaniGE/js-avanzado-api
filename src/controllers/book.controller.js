@@ -25,15 +25,15 @@ const getBook = async (req, res) => {
 
 const addBook = async (req, res) => {
     try {
-        const { title,total_pages,author, nationality, language,cover_url,editorial} = req.body;
+        const {title,total_pages,author, nationality, language,cover_url,editorial} = req.body;
 
         if (title === undefined||total_pages === undefined,author === undefined|| nationality === undefined || language === undefined|| cover_url === undefined || editorial === undefined) {
             res.status(400).json({ message: "Bad Request. Please fill all field." });
         }
 
-        const video = { title,total_pages,author, nationality, language,cover_url,editorial};
+        const book = {title,total_pages,author, nationality, language,cover_url,editorial};
         const connection = await getConnection();
-        await connection.query("INSERT INTO books SET ?", video);
+        await connection.query("INSERT INTO books SET ?", book);
         res.json({ message: "Book added" });
     } catch (error) {
         res.status(500);
@@ -50,9 +50,9 @@ const updateBook = async (req, res) => {
             res.status(400).json({ message: "Bad Request. Please fill all field." });
         }
 
-        const video = { title,total_pages,author, nationality, language,cover_url,editorial};
+        const book = { title,total_pages,author, nationality, language,cover_url,editorial};
         const connection = await getConnection();
-        const result = await connection.query("UPDATE books SET ? WHERE id = ?", [video, id]);
+        const result = await connection.query("UPDATE books SET ? WHERE id = ?", [book, id]);
         res.json(result);
     } catch (error) {
         res.status(500);
@@ -74,9 +74,10 @@ const deleteBook = async (req, res) => {
 //adicionales
 const getBookByName = async (req, res) => {
     try {
-        const { title} = req.params;
+        const {title} = req.params;
         const connection = await getConnection();
         const result = await connection.query("SELECT * FROM books WHERE title LIKE ?;", ['%' + title + '%']);
+        //ejemplo titulo = "Don quijote de la mancha", si ingreso don lo va a regresar"
         res.json(result);
     } catch (error) {
         res.status(500);
